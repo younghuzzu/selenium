@@ -1,0 +1,26 @@
+package My2nd;
+
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Again001 {
+
+	public static void main(String[] args) {
+		
+		WebDriver driver;
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\user\\OneDrive\\Desktop\\chrome drivers\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		driver.get("https://demoqa.com/elements");
+		driver.findElement(By.xpath("(//div[@class='left-pannel']//span[@class='text'])[1]")).click();
+		
+		
+	}
+
+}

@@ -1,0 +1,24 @@
+package My2nd;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Capsule3 {
+
+	public static void main(String[] args) {
+			WebDriver driver;
+			System.setProperty("webdriver.chrome.driver","C:\\\\Users\\\\user\\\\OneDrive\\\\Desktop\\\\chrome drivers\\\\chromedriver.exe");
+			driver =new ChromeDriver();
+			driver.manage().window().maximize();
+			driver.get("https://www.amazon.in/");
+			WebElement amz=driver.findElement(By.id("nav-logo-sprites"));
+			amz.isDisplayed();
+			
+//		System.out.println(amz.getText());
+			
+				
+	}
+
+}

@@ -1,0 +1,33 @@
+package My2nd;
+
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Tabswitching {
+
+	public static void main(String[] args) {
+		 WebDriver driver;
+
+		 
+		 System.setProperty("webdriver.chrome.driver","C:\\Users\\user\\OneDrive\\Desktop\\chrome drivers\\chromedriver.exe");
+		 driver =new ChromeDriver();
+		 
+		 driver.manage().window().maximize();
+		 driver.get("https://demoqa.com/browser-windows");
+		 driver.findElement(By.id("tabButton")).click();
+		 String currtab= driver.getWindowHandle();
+		 WebElement text= driver.findElement(By.linkText("This is a sample page"));
+		 text.getText();
+		 
+//		 Set<String> all_tabs= driver.getWindowHandles();
+		 
+		 
+		 
+		 
+	}
+
+}
